@@ -37,7 +37,7 @@ public class Generator {
         initFile();
     }
 
-    // 4095
+    // 4095 2^12
     void generateSimple(long conditionsToGenerate) {
         System.out.println("Generating DUMB java implementation.");
 
@@ -72,7 +72,7 @@ public class Generator {
         appendToFile("}");
     }
 
-    // maxL 32739 - 32740  // maxI 98206 - 98207
+    // maxL 32739 - 32740 = 2^15 // maxI 98206 - 98207 2^15+2^16
     void generateWithSubMethods(long conditionsToGenerate, boolean longType) {
         int maxNumberOfConditions = 5460;
         System.out.println(STR."Generating java implementation with submethods of size \{maxNumberOfConditions}");
