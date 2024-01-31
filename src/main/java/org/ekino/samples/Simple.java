@@ -14,3 +14,6 @@ void main(String[] a) {
     if (number == 10) System.out.println("even");
     //(...)
 }
+
+// Pas de class Simple { }
+// Pas de public static void main()

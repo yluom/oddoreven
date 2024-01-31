@@ -25,12 +25,14 @@ public class Generator {
     final Path javaFile = Paths.get("/Users/leo.mouly/IdeaProjects/oddoreven/src/main/java/org/ekino/OddOrEven.java");
 
     void main(String[] args) {
+        // Nombre de conditions à gérer -> le number à maximiser
         long conditionsToGenerate = Long.parseLong(args[0]);
         Generator generator = new Generator();
-        // generator.generateSimple(conditionsToGenerate);
+        generator.generateSimple(conditionsToGenerate);
         // generator.generateGolfed(conditionsToGenerate);
         // generator.generateWithSubMethods(conditionsToGenerate, true);
-        generator.generateWithSubMethods(conditionsToGenerate, false);
+        // generator.generateWithSubMethods(conditionsToGenerate, false);
+        // generator.generateWithSubMethodsNoConstants(conditionsToGenerate, true);
     }
 
     Generator() {
@@ -44,15 +46,16 @@ public class Generator {
         appendToFile("""
                 // java --source 21 --enable-preview OddOrEven.java 4095
                 void main(String[] args) {
-                long number = Long.parseLong(args[0]);""");
+                    long number = Long.parseLong(args[0]);""");
 
         var conditions = LongStream.range(0, conditionsToGenerate)
-                .mapToObj(num -> STR."    if (number == \{num}) System.out.println(\"\{num % 2 == 0 ? "even" : "odd"}\");")
+                .mapToObj(number -> STR."    if (number == \{number}) System.out.println(\"\{ isEvenDontLookMyImplemPlease(number) ? "even" : "odd"}\");")
                 .collect(Collectors.joining("\n"));
 
         appendToFile(conditions);
         appendToFile("}");
     }
+
 
     // Max 5460/5461
     void generateGolfed(long conditionsToGenerate) {
@@ -65,7 +68,7 @@ public class Generator {
                 var n = Long.parseLong(a[0]);""");
 
         var conditions = LongStream.range(0, conditionsToGenerate)
-                .mapToObj(num -> STR."if (n==\{num}) \{num % 2 == 0 ? "even" : "odd"}();")
+                .mapToObj(num -> STR."if (n==\{num}) \{isEvenDontLookMyImplemPlease(num) ? "even" : "odd"}();")
                 .collect(Collectors.joining("\n"));
 
         appendToFile(conditions);
@@ -98,10 +101,47 @@ public class Generator {
         appendToFile("}");
     }
 
+    // ????
+    void generateWithSubMethodsNoConstants(long conditionsToGenerate, boolean longType) {
+        int maxNumberOfConditions = 5041; // 5041 is the new max here
+        System.out.println(STR."Generating java implementation with submethods of size \{maxNumberOfConditions} WITHOUT constants");
+
+        appendToFile("""
+                     // java --source 21 --enable-preview OddOrEven.java 32739
+                     static long next = -1;
+                     long next(){return ++next;}""");
+
+        // Write submethods
+        partition(LongStream.range(0, conditionsToGenerate).boxed(), maxNumberOfConditions)
+                .map(l -> createMethodNoConstants(l, longType ? "long" : "int"))
+                .forEachOrdered(this::appendToFile);
+
+        // Write main Boilerplate
+        appendToFile("""
+                void even(){System.out.println("even");}
+                void odd(){System.out.println("odd");}
+                void main(String[] a){""");
+        appendToFile(longType ? "var n = Long.parseLong(a[0]);" : "var n = Integer.parseInt(a[0]);");
+
+        // Write method calls
+        LongStream.range(0, conditionsToGenerate)
+                .filter(num -> num % maxNumberOfConditions == 0)
+                .forEach(num -> appendToFile(STR."    process\{num}(n);"));
+        appendToFile("}");
+    }
+
     private String createMethod(List<Long> longs, String type) {
         return STR."void process\{longs.getFirst()}(\{type} n) {\n"
                + longs.stream()
-                       .map(num -> STR."    if (n==\{num}) \{num % 2 == 0 ? "even" : "odd"}();")
+                       .map(num -> STR."    if (n==\{num}) \{isEvenDontLookMyImplemPlease(num) ? "even" : "odd"}();")
+                       .collect(Collectors.joining("\n"))
+               + "\n}\n";
+    }
+
+    private String createMethodNoConstants(List<Long> longs, String type) {
+        return STR."void process\{longs.getFirst()}(\{type} n) {\n"
+               + longs.stream()
+                       .map(num -> STR."    if (n==next()) \{isEvenDontLookMyImplemPlease(num) ? "even" : "odd"}();")
                        .collect(Collectors.joining("\n"))
                + "\n}\n";
     }
@@ -125,6 +165,12 @@ public class Generator {
         }
     }
 
+    /**
+     * Copy pasted code from the internet, DON'T TRUST !
+     */
+    static boolean isEvenDontLookMyImplemPlease(long num) {
+        return num % 2 == 0;
+    }
     static Stream<List<Long>> partition(Stream<Long> stream, int batchSize) {
         List<List<Long>> currentBatch = new ArrayList<List<Long>>(); //just to make it mutable
         currentBatch.add(new ArrayList<Long>(batchSize));
