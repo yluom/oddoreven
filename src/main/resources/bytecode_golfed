@@ -1,0 +1,1006 @@
+Classfile /Users/leo.mouly/IdeaProjects/oddoreven/src/main/java/org/ekino/OddOrEven.class
+  Last modified 22 janv. 2024; size 3209 bytes
+  SHA-256 checksum 34100f905b59980c6eceac1b5d45a1d67367bb75c7667be6c6839b232cba5540
+  Compiled from "OddOrEven.java"
+final class OddOrEven
+  minor version: 65535
+  major version: 65
+  flags: (0x1030) ACC_FINAL, ACC_SUPER, ACC_SYNTHETIC
+  this_class: #30                         // OddOrEven
+  super_class: #2                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 4, attributes: 1
+Constant pool:
+    #1 = Methodref          #2.#3         // java/lang/Object."<init>":()V
+    #2 = Class              #4            // java/lang/Object
+    #3 = NameAndType        #5:#6         // "<init>":()V
+    #4 = Utf8               java/lang/Object
+    #5 = Utf8               <init>
+    #6 = Utf8               ()V
+    #7 = Fieldref           #8.#9         // java/lang/System.out:Ljava/io/PrintStream;
+    #8 = Class              #10           // java/lang/System
+    #9 = NameAndType        #11:#12       // out:Ljava/io/PrintStream;
+   #10 = Utf8               java/lang/System
+   #11 = Utf8               out
+   #12 = Utf8               Ljava/io/PrintStream;
+   #13 = String             #14           // even
+   #14 = Utf8               even
+   #15 = Methodref          #16.#17       // java/io/PrintStream.println:(Ljava/lang/String;)V
+   #16 = Class              #18           // java/io/PrintStream
+   #17 = NameAndType        #19:#20       // println:(Ljava/lang/String;)V
+   #18 = Utf8               java/io/PrintStream
+   #19 = Utf8               println
+   #20 = Utf8               (Ljava/lang/String;)V
+   #21 = String             #22           // odd
+   #22 = Utf8               odd
+   #23 = Methodref          #24.#25       // java/lang/Long.parseLong:(Ljava/lang/String;)J
+   #24 = Class              #26           // java/lang/Long
+   #25 = NameAndType        #27:#28       // parseLong:(Ljava/lang/String;)J
+   #26 = Utf8               java/lang/Long
+   #27 = Utf8               parseLong
+   #28 = Utf8               (Ljava/lang/String;)J
+   #29 = Methodref          #30.#31       // OddOrEven.even:()V
+   #30 = Class              #32           // OddOrEven
+   #31 = NameAndType        #14:#6        // even:()V
+   #32 = Utf8               OddOrEven
+   #33 = Methodref          #30.#34       // OddOrEven.odd:()V
+   #34 = NameAndType        #22:#6        // odd:()V
+   #35 = Long               2l
+   #37 = Long               3l
+   #39 = Long               4l
+   #41 = Long               5l
+   #43 = Long               6l
+   #45 = Long               7l
+   #47 = Long               8l
+   #49 = Long               9l
+   #51 = Long               10l
+   #53 = Long               11l
+   #55 = Long               12l
+   #57 = Long               13l
+   #59 = Long               14l
+   #61 = Long               15l
+   #63 = Long               16l
+   #65 = Long               17l
+   #67 = Long               18l
+   #69 = Long               19l
+   #71 = Long               20l
+   #73 = Long               21l
+   #75 = Long               22l
+   #77 = Long               23l
+   #79 = Long               24l
+   #81 = Long               25l
+   #83 = Long               26l
+   #85 = Long               27l
+   #87 = Long               28l
+   #89 = Long               29l
+   #91 = Long               30l
+   #93 = Long               31l
+   #95 = Long               32l
+   #97 = Long               33l
+   #99 = Long               34l
+  #101 = Long               35l
+  #103 = Long               36l
+  #105 = Long               37l
+  #107 = Long               38l
+  #109 = Long               39l
+  #111 = Long               40l
+  #113 = Long               41l
+  #115 = Long               42l
+  #117 = Long               43l
+  #119 = Long               44l
+  #121 = Long               45l
+  #123 = Long               46l
+  #125 = Long               47l
+  #127 = Long               48l
+  #129 = Long               49l
+  #131 = Long               50l
+  #133 = Long               51l
+  #135 = Long               52l
+  #137 = Long               53l
+  #139 = Long               54l
+  #141 = Long               55l
+  #143 = Long               56l
+  #145 = Long               57l
+  #147 = Long               58l
+  #149 = Long               59l
+  #151 = Long               60l
+  #153 = Long               61l
+  #155 = Long               62l
+  #157 = Long               63l
+  #159 = Long               64l
+  #161 = Long               65l
+  #163 = Long               66l
+  #165 = Long               67l
+  #167 = Long               68l
+  #169 = Long               69l
+  #171 = Long               70l
+  #173 = Long               71l
+  #175 = Long               72l
+  #177 = Long               73l
+  #179 = Long               74l
+  #181 = Long               75l
+  #183 = Long               76l
+  #185 = Long               77l
+  #187 = Long               78l
+  #189 = Long               79l
+  #191 = Long               80l
+  #193 = Long               81l
+  #195 = Long               82l
+  #197 = Long               83l
+  #199 = Long               84l
+  #201 = Long               85l
+  #203 = Long               86l
+  #205 = Long               87l
+  #207 = Long               88l
+  #209 = Long               89l
+  #211 = Long               90l
+  #213 = Long               91l
+  #215 = Long               92l
+  #217 = Long               93l
+  #219 = Long               94l
+  #221 = Long               95l
+  #223 = Long               96l
+  #225 = Long               97l
+  #227 = Long               98l
+  #229 = Long               99l
+  #231 = Utf8               Code
+  #232 = Utf8               LineNumberTable
+  #233 = Utf8               main
+  #234 = Utf8               ([Ljava/lang/String;)V
+  #235 = Utf8               StackMapTable
+  #236 = Utf8               SourceFile
+  #237 = Utf8               OddOrEven.java
+{
+  OddOrEven();
+    descriptor: ()V
+    flags: (0x0000)
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 1: 0
+
+  void even();
+    descriptor: ()V
+    flags: (0x0000)
+    Code:
+      stack=2, locals=1, args_size=1
+         0: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: ldc           #13                 // String even
+         5: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+         8: return
+      LineNumberTable:
+        line 1: 0
+
+  void odd();
+    descriptor: ()V
+    flags: (0x0000)
+    Code:
+      stack=2, locals=1, args_size=1
+         0: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: ldc           #21                 // String odd
+         5: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+         8: return
+      LineNumberTable:
+        line 2: 0
+
+  void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x0000)
+    Code:
+      stack=4, locals=4, args_size=2
+         0: aload_1
+         1: iconst_0
+         2: aaload
+         3: invokestatic  #23                 // Method java/lang/Long.parseLong:(Ljava/lang/String;)J
+         6: lstore_2
+         7: lload_2
+         8: lconst_0
+         9: lcmp
+        10: ifne          17
+        13: aload_0
+        14: invokevirtual #29                 // Method even:()V
+        17: lload_2
+        18: lconst_1
+        19: lcmp
+        20: ifne          27
+        23: aload_0
+        24: invokevirtual #33                 // Method odd:()V
+        27: lload_2
+        28: ldc2_w        #35                 // long 2l
+        31: lcmp
+        32: ifne          39
+        35: aload_0
+        36: invokevirtual #29                 // Method even:()V
+        39: lload_2
+        40: ldc2_w        #37                 // long 3l
+        43: lcmp
+        44: ifne          51
+        47: aload_0
+        48: invokevirtual #33                 // Method odd:()V
+        51: lload_2
+        52: ldc2_w        #39                 // long 4l
+        55: lcmp
+        56: ifne          63
+        59: aload_0
+        60: invokevirtual #29                 // Method even:()V
+        63: lload_2
+        64: ldc2_w        #41                 // long 5l
+        67: lcmp
+        68: ifne          75
+        71: aload_0
+        72: invokevirtual #33                 // Method odd:()V
+        75: lload_2
+        76: ldc2_w        #43                 // long 6l
+        79: lcmp
+        80: ifne          87
+        83: aload_0
+        84: invokevirtual #29                 // Method even:()V
+        87: lload_2
+        88: ldc2_w        #45                 // long 7l
+        91: lcmp
+        92: ifne          99
+        95: aload_0
+        96: invokevirtual #33                 // Method odd:()V
+        99: lload_2
+       100: ldc2_w        #47                 // long 8l
+       103: lcmp
+       104: ifne          111
+       107: aload_0
+       108: invokevirtual #29                 // Method even:()V
+       111: lload_2
+       112: ldc2_w        #49                 // long 9l
+       115: lcmp
+       116: ifne          123
+       119: aload_0
+       120: invokevirtual #33                 // Method odd:()V
+       123: lload_2
+       124: ldc2_w        #51                 // long 10l
+       127: lcmp
+       128: ifne          135
+       131: aload_0
+       132: invokevirtual #29                 // Method even:()V
+       135: lload_2
+       136: ldc2_w        #53                 // long 11l
+       139: lcmp
+       140: ifne          147
+       143: aload_0
+       144: invokevirtual #33                 // Method odd:()V
+       147: lload_2
+       148: ldc2_w        #55                 // long 12l
+       151: lcmp
+       152: ifne          159
+       155: aload_0
+       156: invokevirtual #29                 // Method even:()V
+       159: lload_2
+       160: ldc2_w        #57                 // long 13l
+       163: lcmp
+       164: ifne          171
+       167: aload_0
+       168: invokevirtual #33                 // Method odd:()V
+       171: lload_2
+       172: ldc2_w        #59                 // long 14l
+       175: lcmp
+       176: ifne          183
+       179: aload_0
+       180: invokevirtual #29                 // Method even:()V
+       183: lload_2
+       184: ldc2_w        #61                 // long 15l
+       187: lcmp
+       188: ifne          195
+       191: aload_0
+       192: invokevirtual #33                 // Method odd:()V
+       195: lload_2
+       196: ldc2_w        #63                 // long 16l
+       199: lcmp
+       200: ifne          207
+       203: aload_0
+       204: invokevirtual #29                 // Method even:()V
+       207: lload_2
+       208: ldc2_w        #65                 // long 17l
+       211: lcmp
+       212: ifne          219
+       215: aload_0
+       216: invokevirtual #33                 // Method odd:()V
+       219: lload_2
+       220: ldc2_w        #67                 // long 18l
+       223: lcmp
+       224: ifne          231
+       227: aload_0
+       228: invokevirtual #29                 // Method even:()V
+       231: lload_2
+       232: ldc2_w        #69                 // long 19l
+       235: lcmp
+       236: ifne          243
+       239: aload_0
+       240: invokevirtual #33                 // Method odd:()V
+       243: lload_2
+       244: ldc2_w        #71                 // long 20l
+       247: lcmp
+       248: ifne          255
+       251: aload_0
+       252: invokevirtual #29                 // Method even:()V
+       255: lload_2
+       256: ldc2_w        #73                 // long 21l
+       259: lcmp
+       260: ifne          267
+       263: aload_0
+       264: invokevirtual #33                 // Method odd:()V
+       267: lload_2
+       268: ldc2_w        #75                 // long 22l
+       271: lcmp
+       272: ifne          279
+       275: aload_0
+       276: invokevirtual #29                 // Method even:()V
+       279: lload_2
+       280: ldc2_w        #77                 // long 23l
+       283: lcmp
+       284: ifne          291
+       287: aload_0
+       288: invokevirtual #33                 // Method odd:()V
+       291: lload_2
+       292: ldc2_w        #79                 // long 24l
+       295: lcmp
+       296: ifne          303
+       299: aload_0
+       300: invokevirtual #29                 // Method even:()V
+       303: lload_2
+       304: ldc2_w        #81                 // long 25l
+       307: lcmp
+       308: ifne          315
+       311: aload_0
+       312: invokevirtual #33                 // Method odd:()V
+       315: lload_2
+       316: ldc2_w        #83                 // long 26l
+       319: lcmp
+       320: ifne          327
+       323: aload_0
+       324: invokevirtual #29                 // Method even:()V
+       327: lload_2
+       328: ldc2_w        #85                 // long 27l
+       331: lcmp
+       332: ifne          339
+       335: aload_0
+       336: invokevirtual #33                 // Method odd:()V
+       339: lload_2
+       340: ldc2_w        #87                 // long 28l
+       343: lcmp
+       344: ifne          351
+       347: aload_0
+       348: invokevirtual #29                 // Method even:()V
+       351: lload_2
+       352: ldc2_w        #89                 // long 29l
+       355: lcmp
+       356: ifne          363
+       359: aload_0
+       360: invokevirtual #33                 // Method odd:()V
+       363: lload_2
+       364: ldc2_w        #91                 // long 30l
+       367: lcmp
+       368: ifne          375
+       371: aload_0
+       372: invokevirtual #29                 // Method even:()V
+       375: lload_2
+       376: ldc2_w        #93                 // long 31l
+       379: lcmp
+       380: ifne          387
+       383: aload_0
+       384: invokevirtual #33                 // Method odd:()V
+       387: lload_2
+       388: ldc2_w        #95                 // long 32l
+       391: lcmp
+       392: ifne          399
+       395: aload_0
+       396: invokevirtual #29                 // Method even:()V
+       399: lload_2
+       400: ldc2_w        #97                 // long 33l
+       403: lcmp
+       404: ifne          411
+       407: aload_0
+       408: invokevirtual #33                 // Method odd:()V
+       411: lload_2
+       412: ldc2_w        #99                 // long 34l
+       415: lcmp
+       416: ifne          423
+       419: aload_0
+       420: invokevirtual #29                 // Method even:()V
+       423: lload_2
+       424: ldc2_w        #101                // long 35l
+       427: lcmp
+       428: ifne          435
+       431: aload_0
+       432: invokevirtual #33                 // Method odd:()V
+       435: lload_2
+       436: ldc2_w        #103                // long 36l
+       439: lcmp
+       440: ifne          447
+       443: aload_0
+       444: invokevirtual #29                 // Method even:()V
+       447: lload_2
+       448: ldc2_w        #105                // long 37l
+       451: lcmp
+       452: ifne          459
+       455: aload_0
+       456: invokevirtual #33                 // Method odd:()V
+       459: lload_2
+       460: ldc2_w        #107                // long 38l
+       463: lcmp
+       464: ifne          471
+       467: aload_0
+       468: invokevirtual #29                 // Method even:()V
+       471: lload_2
+       472: ldc2_w        #109                // long 39l
+       475: lcmp
+       476: ifne          483
+       479: aload_0
+       480: invokevirtual #33                 // Method odd:()V
+       483: lload_2
+       484: ldc2_w        #111                // long 40l
+       487: lcmp
+       488: ifne          495
+       491: aload_0
+       492: invokevirtual #29                 // Method even:()V
+       495: lload_2
+       496: ldc2_w        #113                // long 41l
+       499: lcmp
+       500: ifne          507
+       503: aload_0
+       504: invokevirtual #33                 // Method odd:()V
+       507: lload_2
+       508: ldc2_w        #115                // long 42l
+       511: lcmp
+       512: ifne          519
+       515: aload_0
+       516: invokevirtual #29                 // Method even:()V
+       519: lload_2
+       520: ldc2_w        #117                // long 43l
+       523: lcmp
+       524: ifne          531
+       527: aload_0
+       528: invokevirtual #33                 // Method odd:()V
+       531: lload_2
+       532: ldc2_w        #119                // long 44l
+       535: lcmp
+       536: ifne          543
+       539: aload_0
+       540: invokevirtual #29                 // Method even:()V
+       543: lload_2
+       544: ldc2_w        #121                // long 45l
+       547: lcmp
+       548: ifne          555
+       551: aload_0
+       552: invokevirtual #33                 // Method odd:()V
+       555: lload_2
+       556: ldc2_w        #123                // long 46l
+       559: lcmp
+       560: ifne          567
+       563: aload_0
+       564: invokevirtual #29                 // Method even:()V
+       567: lload_2
+       568: ldc2_w        #125                // long 47l
+       571: lcmp
+       572: ifne          579
+       575: aload_0
+       576: invokevirtual #33                 // Method odd:()V
+       579: lload_2
+       580: ldc2_w        #127                // long 48l
+       583: lcmp
+       584: ifne          591
+       587: aload_0
+       588: invokevirtual #29                 // Method even:()V
+       591: lload_2
+       592: ldc2_w        #129                // long 49l
+       595: lcmp
+       596: ifne          603
+       599: aload_0
+       600: invokevirtual #33                 // Method odd:()V
+       603: lload_2
+       604: ldc2_w        #131                // long 50l
+       607: lcmp
+       608: ifne          615
+       611: aload_0
+       612: invokevirtual #29                 // Method even:()V
+       615: lload_2
+       616: ldc2_w        #133                // long 51l
+       619: lcmp
+       620: ifne          627
+       623: aload_0
+       624: invokevirtual #33                 // Method odd:()V
+       627: lload_2
+       628: ldc2_w        #135                // long 52l
+       631: lcmp
+       632: ifne          639
+       635: aload_0
+       636: invokevirtual #29                 // Method even:()V
+       639: lload_2
+       640: ldc2_w        #137                // long 53l
+       643: lcmp
+       644: ifne          651
+       647: aload_0
+       648: invokevirtual #33                 // Method odd:()V
+       651: lload_2
+       652: ldc2_w        #139                // long 54l
+       655: lcmp
+       656: ifne          663
+       659: aload_0
+       660: invokevirtual #29                 // Method even:()V
+       663: lload_2
+       664: ldc2_w        #141                // long 55l
+       667: lcmp
+       668: ifne          675
+       671: aload_0
+       672: invokevirtual #33                 // Method odd:()V
+       675: lload_2
+       676: ldc2_w        #143                // long 56l
+       679: lcmp
+       680: ifne          687
+       683: aload_0
+       684: invokevirtual #29                 // Method even:()V
+       687: lload_2
+       688: ldc2_w        #145                // long 57l
+       691: lcmp
+       692: ifne          699
+       695: aload_0
+       696: invokevirtual #33                 // Method odd:()V
+       699: lload_2
+       700: ldc2_w        #147                // long 58l
+       703: lcmp
+       704: ifne          711
+       707: aload_0
+       708: invokevirtual #29                 // Method even:()V
+       711: lload_2
+       712: ldc2_w        #149                // long 59l
+       715: lcmp
+       716: ifne          723
+       719: aload_0
+       720: invokevirtual #33                 // Method odd:()V
+       723: lload_2
+       724: ldc2_w        #151                // long 60l
+       727: lcmp
+       728: ifne          735
+       731: aload_0
+       732: invokevirtual #29                 // Method even:()V
+       735: lload_2
+       736: ldc2_w        #153                // long 61l
+       739: lcmp
+       740: ifne          747
+       743: aload_0
+       744: invokevirtual #33                 // Method odd:()V
+       747: lload_2
+       748: ldc2_w        #155                // long 62l
+       751: lcmp
+       752: ifne          759
+       755: aload_0
+       756: invokevirtual #29                 // Method even:()V
+       759: lload_2
+       760: ldc2_w        #157                // long 63l
+       763: lcmp
+       764: ifne          771
+       767: aload_0
+       768: invokevirtual #33                 // Method odd:()V
+       771: lload_2
+       772: ldc2_w        #159                // long 64l
+       775: lcmp
+       776: ifne          783
+       779: aload_0
+       780: invokevirtual #29                 // Method even:()V
+       783: lload_2
+       784: ldc2_w        #161                // long 65l
+       787: lcmp
+       788: ifne          795
+       791: aload_0
+       792: invokevirtual #33                 // Method odd:()V
+       795: lload_2
+       796: ldc2_w        #163                // long 66l
+       799: lcmp
+       800: ifne          807
+       803: aload_0
+       804: invokevirtual #29                 // Method even:()V
+       807: lload_2
+       808: ldc2_w        #165                // long 67l
+       811: lcmp
+       812: ifne          819
+       815: aload_0
+       816: invokevirtual #33                 // Method odd:()V
+       819: lload_2
+       820: ldc2_w        #167                // long 68l
+       823: lcmp
+       824: ifne          831
+       827: aload_0
+       828: invokevirtual #29                 // Method even:()V
+       831: lload_2
+       832: ldc2_w        #169                // long 69l
+       835: lcmp
+       836: ifne          843
+       839: aload_0
+       840: invokevirtual #33                 // Method odd:()V
+       843: lload_2
+       844: ldc2_w        #171                // long 70l
+       847: lcmp
+       848: ifne          855
+       851: aload_0
+       852: invokevirtual #29                 // Method even:()V
+       855: lload_2
+       856: ldc2_w        #173                // long 71l
+       859: lcmp
+       860: ifne          867
+       863: aload_0
+       864: invokevirtual #33                 // Method odd:()V
+       867: lload_2
+       868: ldc2_w        #175                // long 72l
+       871: lcmp
+       872: ifne          879
+       875: aload_0
+       876: invokevirtual #29                 // Method even:()V
+       879: lload_2
+       880: ldc2_w        #177                // long 73l
+       883: lcmp
+       884: ifne          891
+       887: aload_0
+       888: invokevirtual #33                 // Method odd:()V
+       891: lload_2
+       892: ldc2_w        #179                // long 74l
+       895: lcmp
+       896: ifne          903
+       899: aload_0
+       900: invokevirtual #29                 // Method even:()V
+       903: lload_2
+       904: ldc2_w        #181                // long 75l
+       907: lcmp
+       908: ifne          915
+       911: aload_0
+       912: invokevirtual #33                 // Method odd:()V
+       915: lload_2
+       916: ldc2_w        #183                // long 76l
+       919: lcmp
+       920: ifne          927
+       923: aload_0
+       924: invokevirtual #29                 // Method even:()V
+       927: lload_2
+       928: ldc2_w        #185                // long 77l
+       931: lcmp
+       932: ifne          939
+       935: aload_0
+       936: invokevirtual #33                 // Method odd:()V
+       939: lload_2
+       940: ldc2_w        #187                // long 78l
+       943: lcmp
+       944: ifne          951
+       947: aload_0
+       948: invokevirtual #29                 // Method even:()V
+       951: lload_2
+       952: ldc2_w        #189                // long 79l
+       955: lcmp
+       956: ifne          963
+       959: aload_0
+       960: invokevirtual #33                 // Method odd:()V
+       963: lload_2
+       964: ldc2_w        #191                // long 80l
+       967: lcmp
+       968: ifne          975
+       971: aload_0
+       972: invokevirtual #29                 // Method even:()V
+       975: lload_2
+       976: ldc2_w        #193                // long 81l
+       979: lcmp
+       980: ifne          987
+       983: aload_0
+       984: invokevirtual #33                 // Method odd:()V
+       987: lload_2
+       988: ldc2_w        #195                // long 82l
+       991: lcmp
+       992: ifne          999
+       995: aload_0
+       996: invokevirtual #29                 // Method even:()V
+       999: lload_2
+      1000: ldc2_w        #197                // long 83l
+      1003: lcmp
+      1004: ifne          1011
+      1007: aload_0
+      1008: invokevirtual #33                 // Method odd:()V
+      1011: lload_2
+      1012: ldc2_w        #199                // long 84l
+      1015: lcmp
+      1016: ifne          1023
+      1019: aload_0
+      1020: invokevirtual #29                 // Method even:()V
+      1023: lload_2
+      1024: ldc2_w        #201                // long 85l
+      1027: lcmp
+      1028: ifne          1035
+      1031: aload_0
+      1032: invokevirtual #33                 // Method odd:()V
+      1035: lload_2
+      1036: ldc2_w        #203                // long 86l
+      1039: lcmp
+      1040: ifne          1047
+      1043: aload_0
+      1044: invokevirtual #29                 // Method even:()V
+      1047: lload_2
+      1048: ldc2_w        #205                // long 87l
+      1051: lcmp
+      1052: ifne          1059
+      1055: aload_0
+      1056: invokevirtual #33                 // Method odd:()V
+      1059: lload_2
+      1060: ldc2_w        #207                // long 88l
+      1063: lcmp
+      1064: ifne          1071
+      1067: aload_0
+      1068: invokevirtual #29                 // Method even:()V
+      1071: lload_2
+      1072: ldc2_w        #209                // long 89l
+      1075: lcmp
+      1076: ifne          1083
+      1079: aload_0
+      1080: invokevirtual #33                 // Method odd:()V
+      1083: lload_2
+      1084: ldc2_w        #211                // long 90l
+      1087: lcmp
+      1088: ifne          1095
+      1091: aload_0
+      1092: invokevirtual #29                 // Method even:()V
+      1095: lload_2
+      1096: ldc2_w        #213                // long 91l
+      1099: lcmp
+      1100: ifne          1107
+      1103: aload_0
+      1104: invokevirtual #33                 // Method odd:()V
+      1107: lload_2
+      1108: ldc2_w        #215                // long 92l
+      1111: lcmp
+      1112: ifne          1119
+      1115: aload_0
+      1116: invokevirtual #29                 // Method even:()V
+      1119: lload_2
+      1120: ldc2_w        #217                // long 93l
+      1123: lcmp
+      1124: ifne          1131
+      1127: aload_0
+      1128: invokevirtual #33                 // Method odd:()V
+      1131: lload_2
+      1132: ldc2_w        #219                // long 94l
+      1135: lcmp
+      1136: ifne          1143
+      1139: aload_0
+      1140: invokevirtual #29                 // Method even:()V
+      1143: lload_2
+      1144: ldc2_w        #221                // long 95l
+      1147: lcmp
+      1148: ifne          1155
+      1151: aload_0
+      1152: invokevirtual #33                 // Method odd:()V
+      1155: lload_2
+      1156: ldc2_w        #223                // long 96l
+      1159: lcmp
+      1160: ifne          1167
+      1163: aload_0
+      1164: invokevirtual #29                 // Method even:()V
+      1167: lload_2
+      1168: ldc2_w        #225                // long 97l
+      1171: lcmp
+      1172: ifne          1179
+      1175: aload_0
+      1176: invokevirtual #33                 // Method odd:()V
+      1179: lload_2
+      1180: ldc2_w        #227                // long 98l
+      1183: lcmp
+      1184: ifne          1191
+      1187: aload_0
+      1188: invokevirtual #29                 // Method even:()V
+      1191: lload_2
+      1192: ldc2_w        #229                // long 99l
+      1195: lcmp
+      1196: ifne          1203
+      1199: aload_0
+      1200: invokevirtual #33                 // Method odd:()V
+      1203: return
+      LineNumberTable:
+        line 4: 0
+        line 5: 7
+        line 6: 17
+        line 7: 27
+        line 8: 39
+        line 9: 51
+        line 10: 63
+        line 11: 75
+        line 12: 87
+        line 13: 99
+        line 14: 111
+        line 15: 123
+        line 16: 135
+        line 17: 147
+        line 18: 159
+        line 19: 171
+        line 20: 183
+        line 21: 195
+        line 22: 207
+        line 23: 219
+        line 24: 231
+        line 25: 243
+        line 26: 255
+        line 27: 267
+        line 28: 279
+        line 29: 291
+        line 30: 303
+        line 31: 315
+        line 32: 327
+        line 33: 339
+        line 34: 351
+        line 35: 363
+        line 36: 375
+        line 37: 387
+        line 38: 399
+        line 39: 411
+        line 40: 423
+        line 41: 435
+        line 42: 447
+        line 43: 459
+        line 44: 471
+        line 45: 483
+        line 46: 495
+        line 47: 507
+        line 48: 519
+        line 49: 531
+        line 50: 543
+        line 51: 555
+        line 52: 567
+        line 53: 579
+        line 54: 591
+        line 55: 603
+        line 56: 615
+        line 57: 627
+        line 58: 639
+        line 59: 651
+        line 60: 663
+        line 61: 675
+        line 62: 687
+        line 63: 699
+        line 64: 711
+        line 65: 723
+        line 66: 735
+        line 67: 747
+        line 68: 759
+        line 69: 771
+        line 70: 783
+        line 71: 795
+        line 72: 807
+        line 73: 819
+        line 74: 831
+        line 75: 843
+        line 76: 855
+        line 77: 867
+        line 78: 879
+        line 79: 891
+        line 80: 903
+        line 81: 915
+        line 82: 927
+        line 83: 939
+        line 84: 951
+        line 85: 963
+        line 86: 975
+        line 87: 987
+        line 88: 999
+        line 89: 1011
+        line 90: 1023
+        line 91: 1035
+        line 92: 1047
+        line 93: 1059
+        line 94: 1071
+        line 95: 1083
+        line 96: 1095
+        line 97: 1107
+        line 98: 1119
+        line 99: 1131
+        line 100: 1143
+        line 101: 1155
+        line 102: 1167
+        line 103: 1179
+        line 104: 1191
+        line 105: 1203
+      StackMapTable: number_of_entries = 100
+        frame_type = 252 /* append */
+          offset_delta = 17
+          locals = [ long ]
+        frame_type = 9 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+        frame_type = 11 /* same */
+}
+SourceFile: "OddOrEven.java"
