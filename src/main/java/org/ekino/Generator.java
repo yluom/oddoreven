@@ -26,13 +26,14 @@ public class Generator {
 
     void main(String[] args) {
         // Nombre de conditions à gérer -> le number à maximiser
-        long conditionsToGenerate = Long.parseLong(args[0]);
+        long maxNNumberOfConditions = Long.parseLong(args[0]);
         Generator generator = new Generator();
-        generator.generateSimple(conditionsToGenerate);
-        // generator.generateGolfed(conditionsToGenerate);
-        // generator.generateWithSubMethods(conditionsToGenerate, true);
-        // generator.generateWithSubMethods(conditionsToGenerate, false);
-        // generator.generateWithSubMethodsNoConstants(conditionsToGenerate, true);
+        generator.generateSimple(maxNNumberOfConditions);
+
+        // generator.generateGolfed(maxNNumberOfConditions);
+        // generator.generateWithSubMethods(maxNNumberOfConditions, true);
+        // generator.generateWithSubMethods(maxNNumberOfConditions, false);
+        // generator.generateWithSubMethodsNoConstants(maxNNumberOfConditions, true);
     }
 
     Generator() {
@@ -48,6 +49,7 @@ public class Generator {
                 void main(String[] args) {
                     long number = Long.parseLong(args[0]);""");
 
+        //    if (number == 0) System.out.println("even");
         var conditions = LongStream.range(0, conditionsToGenerate)
                 .mapToObj(number -> STR."    if (number == \{number}) System.out.println(\"\{ isEvenDontLookMyImplemPlease(number) ? "even" : "odd"}\");")
                 .collect(Collectors.joining("\n"));
